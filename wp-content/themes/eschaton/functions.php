@@ -52,10 +52,10 @@ if (function_exists('acf_add_options_page')) {
 		'page_title' => 'Global Options',
 		'icon_url' => 'dashicons-admin-generic',
 	));
-	acf_add_options_page(array(
-		'page_title' => 'Tour Options',
-		'icon_url' => 'dashicons-admin-generic',
-	));
+	// acf_add_options_page(array(
+	// 	'page_title' => 'Tour Options',
+	// 	'icon_url' => 'dashicons-admin-generic',
+	// ));
 	acf_add_options_page(array(
 		'page_title' => 'Emails Formatted',
 		'icon_url' => 'dashicons-email-alt',
