@@ -21,3 +21,5 @@ require_once(ESC_DIR.'/cookies.php');
 // REQUIRE CUSTOM POST TYPES 
 require_once(ESC_DIR.'/cpt/cpt-publication.php');
 require_once(ESC_DIR.'/cpt/cpt-studio.php');
+
+require_once(ESC_DIR.'/options.php');
