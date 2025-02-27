@@ -52,7 +52,7 @@ function chips_post_types()
 		'capability_type'		=> 'page',
 		'rewrite' => true
 	);
-	register_post_type('exhibitions', $args_Exhibitions);
+	//register_post_type('exhibitions', $args_Exhibitions);
 
 
 	$labels_Artists = array(
@@ -106,7 +106,7 @@ function chips_post_types()
 		'capability_type'		=> 'page',
 		'rewrite' => true
 	);
-	register_post_type('artists', $args_Artists);
+	//register_post_type('artists', $args_Artists);
 
 	$labels_Tours = array(
 		'name'					=> 'Tours',
@@ -159,7 +159,7 @@ function chips_post_types()
 		'capability_type'		=> 'page',
 		'rewrite' => true
 	);
-	register_post_type('tours', $args_Tours);
+	//register_post_type('tours', $args_Tours);
 
 	$labels_homepages = array(
 		'name'					=> 'Homepages',

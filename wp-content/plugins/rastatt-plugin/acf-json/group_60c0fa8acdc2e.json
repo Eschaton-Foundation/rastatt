@@ -81,6 +81,7 @@
             "max": 0,
             "layout": "table",
             "button_label": "Add an image",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_60c0fd4c7dc55",
@@ -134,8 +135,7 @@
                     "mime_types": "",
                     "parent_repeater": "field_60c0fd357dc54"
                 }
-            ],
-            "rows_per_page": 20
+            ]
         },
         {
             "key": "field_60c0fd887dc58",
@@ -147,11 +147,12 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
+            "allow_in_bindings": 1,
             "tabs": "all",
             "toolbar": "basic",
             "media_upload": 0,
@@ -167,11 +168,12 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
+            "allow_in_bindings": 1,
             "tabs": "all",
             "toolbar": "basic",
             "media_upload": 0,
@@ -187,11 +189,12 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
+            "allow_in_bindings": 1,
             "tabs": "all",
             "toolbar": "basic",
             "media_upload": 0,
@@ -216,5 +219,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1675669845
+    "modified": 1740662801
 }

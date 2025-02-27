@@ -57,7 +57,7 @@ function publication_register_post_types() {
 
 	register_post_type( 'publication', $args );
 }
-add_action( 'init', 'publication_register_post_types' ); // Le hook init lance la fonction
+//add_action( 'init', 'publication_register_post_types' ); // Le hook init lance la fonction
 
 
 
@@ -167,4 +167,4 @@ function publication_taxonomies() {
 	register_taxonomy( 'publication_date', array( 'publication' ), $args );
 
 }
-add_action( 'init', 'publication_taxonomies', 0 );
+//add_action( 'init', 'publication_taxonomies', 0 );

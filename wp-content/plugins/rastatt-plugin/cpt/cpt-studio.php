@@ -57,4 +57,4 @@ function studio_register_post_types() {
 
 	register_post_type( 'studio', $args );
 }
-add_action( 'init', 'studio_register_post_types' ); // Le hook init lance la fonction
+//add_action( 'init', 'studio_register_post_types' ); // Le hook init lance la fonction

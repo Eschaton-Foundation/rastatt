@@ -3,14 +3,14 @@
 // https://tarteaucitron.io/fr/install/
 
 
-function eschaton_tarteaucitron_load() {
+function rastatt_tarteaucitron_load() {
   wp_enqueue_script( 'tarteaucitron', ESC_URL . '/js/tarteaucitron/tarteaucitron.js' );
 } 
-add_action( 'wp_enqueue_scripts', 'eschaton_tarteaucitron_load' );
+add_action( 'wp_enqueue_scripts', 'rastatt_tarteaucitron_load' );
 
 
 
-function eschaton_tarteaucitron_init() { ?> 
+function rastatt_tarteaucitron_init() { ?> 
 
 <script type="text/javascript">
 
@@ -70,5 +70,5 @@ function eschaton_tarteaucitron_init() { ?>
   
 <?php
 }		
-add_action('wp_head', 'eschaton_tarteaucitron_init');
+add_action('wp_head', 'rastatt_tarteaucitron_init');
 
