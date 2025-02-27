@@ -1,0 +1,29 @@
+<?php 
+
+    $periods = ['Present', 'Forthcoming', 'Past'];
+
+    foreach( $periods as $period ) : 
+
+        if( isset( $args['term'] ) ) {
+            $args = array(
+                'tax_query' => $args['tax_query'],
+                'step'      => $args['step'],
+                'period'    => $period,
+                'taxonomy' 	=> $args['taxonomy'],
+                'term' 		=> $args['term'],
+                'termID' 	=> $args['termID'],
+                'offset' 	=> $args['offset'],
+            );
+        }
+        else {
+            $args = array(
+                'step'      => $args['step'],
+                'period'    => $period,
+            );
+        }
+            
+        get_template_part('components/loops/loop', 'exhibitions', $args);
+        
+    endforeach; ?>
+
+
