@@ -694,20 +694,6 @@ function outputTourDate($inDate,$outPart = 0){
 }
 
 
-// function my_theme_modify_stripe_fields_styles( $styles ) {
-//     return array(
-//         'base' => array(
-//             'iconColor'     => '#666EE8',
-//             'color'         => 'red',
-//             'fontSize'      => '15px',
-//             '::placeholder' => array(
-//                 'color' => 'red',
-//             ),
-//         ),
-//     );
-// }
-
-// add_filter( 'gform_stripe_elements_styling', 'my_theme_modify_stripe_fields_styles' );
 
 add_filter( 'gform_stripe_elements_style', 'set_stripe_styles', 10, 2 );
 function set_stripe_styles( $cardStyles, $formId){
