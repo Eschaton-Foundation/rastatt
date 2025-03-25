@@ -1,4 +1,11 @@
 
+php_value upload_max_filesize 256M
+php_value post_max_size 512M
+php_value memory_limit 1024M
+php_value max_execution_time 500
+php_value max_input_time 500
+
+
 # BEGIN WordPress
 # Les directives (lignes) entre « BEGIN WordPress » et « END WordPress » sont générées
 # dynamiquement, et doivent être modifiées uniquement via les filtres WordPress.

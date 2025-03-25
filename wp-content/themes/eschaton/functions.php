@@ -4,7 +4,6 @@ add_theme_support('menus');
 add_post_type_support('page', 'excerpt');
 
 include("_posttypes.php");
-include("_taxonomies.php");
 require_once('classes/flex.php');
 require_once('classes/Filters.php');
 

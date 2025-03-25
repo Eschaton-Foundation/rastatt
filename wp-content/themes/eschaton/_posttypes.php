@@ -1,59 +1,6 @@
 <?php
 function chips_post_types()
 {
-	$labels_Exhibitions = array(
-		'name'					=> 'Exhibitions',
-		'singular_name'			=> 'Exhibition',
-		'menu_name'				=> 'Exhibitions',
-		'name_admin_bar'		=> 'Exhibition',
-		'archives'				=> 'Exhibition Archives',
-		'attributes'			=> 'Exhibition Attributes',
-		'parent_item_colon'		=> 'Parent Item:',
-		'all_items'				=> 'Exhibitions',
-		'add_new_item'			=> 'Add New Exhibition',
-		'add_new'				=> 'Add Exhibition',
-		'new_item'				=> 'New Item',
-		'edit_item'				=> 'Edit Item',
-		'update_item'			=> 'Update Item',
-		'view_item'				=> 'View Item',
-		'view_items'			=> 'View Items',
-		'search_items'			=> 'Search Item',
-		'not_found'				=> 'Not found',
-		'not_found_in_trash'	=> 'Not found in Trash',
-		'featured_image'		=> 'Featured Image',
-		'set_featured_image'	=> 'Set featured image',
-		'remove_featured_image'	=> 'Remove featured image',
-		'use_featured_image'	=> 'Use as featured image',
-		'insert_into_item'		=> 'Insert into item',
-		'uploaded_to_this_item'	=> 'Uploaded to this item',
-		'items_list'			=> 'Items list',
-		'items_list_navigation'	=> 'Items list navigation',
-		'filter_items_list'		=> 'Filter items list',
-	);
-	$args_Exhibitions = array(
-		'label'					=> 'Exhibitions',
-		'description'			=> 'Exhibition Records',
-		'labels'				=> $labels_Exhibitions,
-		'supports'				=> array('title', 'editor', 'thumbnail'),
-		'taxonomies'			=> array('exhyear'),
-		'hierarchical'			=> true,
-		'public'				=> true,
-		'show_in_rest'			=> true,
-		'show_ui'				=> true,
-		'show_in_menu'			=> true,
-		'menu_position'			=> 20,
-		'menu_icon'				=> 'dashicons-text-page',
-		'show_in_admin_bar'		=> true,
-		'show_in_nav_menus'		=> true,
-		'can_export'			=> true,
-		'has_archive'			=> false,
-		'exclude_from_search'	=> false,
-		'publicly_queryable'	=> true,
-		'capability_type'		=> 'page',
-		'rewrite' => true
-	);
-	//register_post_type('exhibitions', $args_Exhibitions);
-
 
 	$labels_Artists = array(
 		'name'					=> 'Artists',
@@ -265,31 +212,7 @@ function chips_post_types()
 		'capability_type'		=> 'page',
 		'rewrite'				=> false
 	);
-	register_post_type('emails', $args_Emails);
+	//register_post_type('emails', $args_Emails);
 }
 add_action('init', 'chips_post_types', 0);
 
-// add_filter( 'manage_works_posts_columns', 'set_custom_edit_works_columns' );
-// function set_custom_edit_works_columns($columns) {
-// 	unset( $columns['worktype'] );
-// 	unset( $columns['date'] );
-// 	$columns['works_exh'] = __( 'Exhibition', 'kmayerson' );
-// 	// $columns['publisher'] = __( 'Publisher', 'kmayerson' );
-
-// 	return $columns;
-// }
-
-// // Add the data to the custom columns for the works post type:
-// add_action( 'manage_works_posts_custom_column' , 'custom_works_column', 10, 2 );
-// function custom_works_column( $column, $post_id ) {
-//     switch ( $column ) {
-
-//         case 'works_exh' :
-//             the_field("notes_admin",$post_id);
-
-//         case 'publisher' :
-//             echo get_post_meta( $post_id , 'publisher' , true ); 
-//             break;
-
-//     }
-// }
