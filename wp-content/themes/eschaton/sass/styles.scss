@@ -304,7 +304,24 @@ a {
             margin-bottom: 1px;
         }
     }
+    &[target="_blank"] {
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        &:after {
+            content: "";
+            display: inline-block;
+            background-image: url('../assets/link-out.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+            margin-left: 0.25em;
+            margin-bottom: 1px;
+        }
+    }
 }
+
 
 @import "headerfooter";
 @import "components";
