@@ -1,8 +1,5 @@
 <?php 
-
-    $title = get_the_title();
-
-?>
+    $title = get_the_title(); ?>
 
 <article class="exhibition-single">
 

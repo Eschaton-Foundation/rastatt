@@ -233,12 +233,7 @@ textarea {
 }
 .wyg b,
 .wyg strong {
-  font-size: 21px;
-  letter-spacing: 0.015em;
-  word-spacing: -0.03em;
-  font-variant: small-caps;
-  font-weight: normal;
-  text-transform: lowercase;
+  font-weight: 600;
 }
 .wyg small {
   font-weight: normal;
