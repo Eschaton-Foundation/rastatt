@@ -3781,11 +3781,25 @@ nav + main:not([data-barba-namespace=home]) .subnav + * {
 }
 figure.slideshow {
   position: relative;
-  margin: 0 0 0 0;
+  max-height: 95vh;
+  min-height: 600px;
+  margin: 0 0 5rem 0;
   z-index: -1;
 }
-figure.slideshow .slide {
+figure.slideshow:before {
+  content: "";
+  display: block;
   position: relative;
+  width: 100%;
+  padding-bottom: 75%;
+}
+@media (max-width: 849px) {
+  figure.slideshow:before {
+    padding-bottom: 120%;
+  }
+}
+figure.slideshow .slide {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -3803,7 +3817,7 @@ figure.slideshow .slide.active {
   transition-delay: 0s;
 }
 figure.slideshow .slide img {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
