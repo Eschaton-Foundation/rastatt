@@ -120,6 +120,10 @@ function mod_translation_textarea($hook)
 	wp_enqueue_script('my_custom_script', plugin_dir_url(__FILE__) . '/myscript.js');
 }
 
+
+pll_register_string( 'eschaton', 'All' );
+
+
 // Force Gravity Forms to init scripts in the footer and ensure that the DOM is loaded before scripts are executed.
 add_filter('gform_init_scripts_footer', '__return_true');
 add_filter('gform_cdata_open', 'wrap_gform_cdata_open', 1);
