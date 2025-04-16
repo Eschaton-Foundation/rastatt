@@ -3781,7 +3781,6 @@ nav + main:not([data-barba-namespace=home]) .subnav + * {
 }
 figure.slideshow {
   position: relative;
-  max-height: 95vh;
   min-height: 600px;
   margin: 0 0 5rem 0;
   z-index: -1;
