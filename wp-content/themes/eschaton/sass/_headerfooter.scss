@@ -27,7 +27,7 @@ header {
     }
 
     @media (max-width: 767px) {
-        padding-top: 0.45rem;
+        //padding-top: 0.45rem;
 
         .menu-toggle {
             position: absolute;
@@ -269,6 +269,14 @@ nav.menu-primary-nav-container {
     @include padinLR;
     padding-top: 1rem;
     padding-bottom: 1rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+
 }
 
 footer {
