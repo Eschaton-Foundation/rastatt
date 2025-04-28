@@ -3623,6 +3623,7 @@ section.section-image img {
   display: block;
   max-width: 100%;
   height: auto;
+  width: 100%;
 }
 section.section-image .vert {
   max-width: 70%;
