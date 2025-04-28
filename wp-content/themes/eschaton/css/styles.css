@@ -3628,11 +3628,17 @@ section.section-image .vert {
   max-width: 70%;
   margin: auto;
 }
+section.section-image_cols {
+  display: flex;
+  justify-content: center;
+}
 section.section-image_cols .img-cols-grid {
   display: grid;
   margin-left: 40px;
   margin-right: 40px;
   gap: 40px;
+  width: calc(75% - 3rem);
+  max-width: 60em;
 }
 @media (max-width: 767px) {
   section.section-image_cols .img-cols-grid {

@@ -495,11 +495,17 @@ section {
     }
 
     &.section-image_cols {
+
+        display: flex;
+        justify-content: center;
+
         .img-cols-grid {
             display: grid;
             margin-left: 40px;
             margin-right: 40px;
             gap: 40px;
+            width: calc(75% - 3rem);
+            max-width: 60em;
 
             @media (max-width: 767px) {
                 gap: 1rem;
