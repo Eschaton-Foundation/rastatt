@@ -242,20 +242,22 @@ textarea {
   line-height: 1.25;
 }
 .wyg h2 {
+  font-size: 26px;
   margin-bottom: 1em;
 }
 .wyg h3 {
   text-transform: lowercase;
   font-variant: small-caps;
-  font-size: 22px;
+  font-size: 24px;
   line-height: 0.9;
   margin-bottom: 1rem;
+  margin-top: 2rem;
   letter-spacing: 0.01em;
 }
 .wyg h4 {
   font-weight: normal;
-  margin: 3.5rem 0 2rem;
-  font-size: 21px;
+  margin: 2rem 0 1rem;
+  font-size: 22px;
   letter-spacing: 0.015em;
   word-spacing: -0.03em;
   font-variant: small-caps;
