@@ -241,12 +241,15 @@ textarea {
   display: block;
   line-height: 1.25;
 }
+.wyg h2 {
+  margin-bottom: 1em;
+}
 .wyg h3 {
   text-transform: lowercase;
   font-variant: small-caps;
-  font-size: 1.3333em;
+  font-size: 1.22px;
   line-height: 0.9;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   letter-spacing: 0.01em;
 }
 .wyg h4 {
