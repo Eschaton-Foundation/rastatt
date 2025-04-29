@@ -2,8 +2,8 @@
 Contributors: loyaltymanufaktur
 Tags: backup, migration, zip files, archive, custom post types
 Requires at least: 4.9
-Tested up to: 6.7
-Stable tag: 1.6.11
+Tested up to: 6.8
+Stable tag: 1.6.12
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -63,6 +63,9 @@ Be sure that your user account has permissions to edit posts ("edit_post" capabi
 1. Links to archive the post and to extract
 
 == Changelog ==
+
+= 1.6.12 =
+* Tested up to Wordpress 6.8.
 
 = 1.6.11 =
 * Fixed import issues.

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Zippy
  * Description: Incredibly easy solution to archive pages and posts as zip file and unpack them back even on the other website!
- * Version: 1.6.11
+ * Version: 1.6.12
  * Author: Gesundheit Bewegt GmbH
  * Author URI: http://gesundheit-bewegt.com/
  * Text Domain: zippy
