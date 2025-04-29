@@ -3652,6 +3652,7 @@ section.section-image_cols img {
   display: block;
   width: 100%;
   height: auto;
+  max-width: 30em;
 }
 section.section-text_cols {
   display: grid;
