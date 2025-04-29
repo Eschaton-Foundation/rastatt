@@ -140,6 +140,14 @@ class WPSEO_Option_Wpseo extends WPSEO_Option {
 		'new_taxonomies'                               => [],
 		'show_new_content_type_notification'           => false,
 		'site_kit_configuration_permanently_dismissed' => false,
+		'site_kit_connected'                           => false,
+		'site_kit_usage_tracking'                      => [
+			'setup_widget_loaded'                => 'no',
+			'first_interaction_stage'            => '',
+			'last_interaction_stage'             => '',
+			'setup_widget_temporarily_dismissed' => 'no',
+			'setup_widget_permanently_dismissed' => 'no',
+		],
 	];
 
 	/**
@@ -412,6 +420,7 @@ class WPSEO_Option_Wpseo extends WPSEO_Option {
 				case 'last_known_public_taxonomies':
 				case 'new_post_types':
 				case 'new_taxonomies':
+				case 'site_kit_usage_tracking':
 					$clean[ $key ] = $old[ $key ];
 
 					if ( isset( $dirty[ $key ] ) ) {
@@ -509,6 +518,7 @@ class WPSEO_Option_Wpseo extends WPSEO_Option {
 				 *  'should_redirect_after_install_free'
 				 *  'show_new_content_type_notification'
 				 *  'site_kit_configuration_permanently_dismissed',
+				 * 'site_kit_connected',
 				 *  and most of the feature variables.
 				 */
 				default:
