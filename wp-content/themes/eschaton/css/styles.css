@@ -3617,7 +3617,7 @@ section.section-image.ext {
 }
 section.section-image.inset {
   width: 80%;
-  max-width: 30em;
+  max-width: 28em;
 }
 section.section-image img {
   display: block;
