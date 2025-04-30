@@ -189,19 +189,22 @@
 					const clone = parentSelector.innerHTML;
 					const firstElement = parentSelector.children[0];
 					const firstWidth = firstElement.clientWidth;
-					let i = 0;
+					let i = 100;
 					parentSelector.insertAdjacentHTML('beforeend', clone);
 					parentSelector.insertAdjacentHTML('beforeend', clone);
 
 					setTimeout( () => {
 						setInterval(function () {
-							firstElement.style.marginLeft = `-${i}px`;
-							if (i > firstWidth) {
-								i = 0;
+							if ( - i > firstWidth) {
+								i = 200;
+								firstElement.style.marginLeft = `${i}px`;
 							}
-							i = i + speed;
+							else {
+								firstElement.style.marginLeft = `${i}px`;
+							}
+							i = i - speed;
 						}, 0);
-					}, 1000)
+					}, 2000)
 
 				}
 
