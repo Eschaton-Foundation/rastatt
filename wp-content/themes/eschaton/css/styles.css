@@ -3909,6 +3909,7 @@ figure.slideshow .slide img {
   left: 0;
   width: 100%;
   object-fit: contain;
+  padding-top: 70px;
 }
 @media (min-width: 850px) {
   figure.slideshow .slide .orient-vert {
