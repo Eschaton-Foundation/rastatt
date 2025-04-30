@@ -24,7 +24,7 @@ figure.slideshow {
 	margin: 0 0 5rem 0;
 	z-index: -1;
 	&:before {
-		content: "";
+		//content: "";
 		display: block;
 		position: relative;
 		width: 100%;
@@ -34,7 +34,7 @@ figure.slideshow {
 		}
 	}
 	.slide {
-		position: absolute;
+		//position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -54,7 +54,7 @@ figure.slideshow {
 		// animation-duration: 9s;
 		// animation-iteration-count: infinite;
 		img {
-			position: absolute;
+			//position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
