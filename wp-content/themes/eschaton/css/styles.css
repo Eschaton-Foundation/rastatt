@@ -2394,7 +2394,9 @@ h2.studio_dates {
   font-size: 22px;
   letter-spacing: 0.05em;
   margin-right: 100px;
+  margin-left: 40px;
   font-weight: normal;
+  transition: all 0.3s;
 }
 .header_banner .marquee a {
   text-decoration: underline;

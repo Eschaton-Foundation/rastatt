@@ -193,13 +193,16 @@
 					parentSelector.insertAdjacentHTML('beforeend', clone);
 					parentSelector.insertAdjacentHTML('beforeend', clone);
 
-					setInterval(function () {
-						firstElement.style.marginLeft = `-${i}px`;
-						if (i > firstWidth) {
-							i = 0;
-						}
-						i = i + speed;
-					}, 0);
+					setTimeout( () => {
+						setInterval(function () {
+							firstElement.style.marginLeft = `-${i}px`;
+							if (i > firstWidth) {
+								i = 0;
+							}
+							i = i + speed;
+						}, 0);
+					}, 1000)
+
 				}
 
 				//after window is completed load
