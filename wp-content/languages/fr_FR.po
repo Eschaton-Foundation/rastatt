@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.8.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-04-23 15:44:16+0000\n"
+"PO-Revision-Date: 2025-05-06 13:34:01+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -52,7 +52,7 @@ msgstr "off"
 #: wp-includes/js/dist/block-library.js:43971
 #: wp-includes/js/dist/block-library.js:46218
 #: wp-includes/js/dist/editor.js:27461 wp-includes/js/dist/editor.js:27505
-#: wp-includes/js/dist/editor.js:32495
+#: wp-includes/js/dist/editor.js:32494
 #, gp-priority: high
 msgctxt "Word count type. Do not translate!"
 msgid "words"
@@ -280,7 +280,7 @@ msgstr "janvier"
 #: wp-includes/js/dist/block-editor.js:48938
 #: wp-includes/js/dist/block-editor.js:48943
 #: wp-includes/js/dist/block-editor.js:50082
-#: wp-includes/js/dist/block-editor.js:74013
+#: wp-includes/js/dist/block-editor.js:74008
 #: wp-includes/js/dist/edit-site.js:27267 wp-admin/includes/upgrade.php:182
 #, gp-priority: high
 msgid "Uncategorized"
@@ -319,8 +319,8 @@ msgstr "Téléversement"
 
 #. translators: Hidden accessibility text.
 #: wp-includes/js/dist/block-editor.js:24700
-#: wp-includes/js/dist/block-editor.js:68823
-#: wp-includes/js/dist/block-editor.js:68841
+#: wp-includes/js/dist/block-editor.js:68826
+#: wp-includes/js/dist/block-editor.js:68844
 #: wp-includes/js/dist/block-library.js:65522
 #: wp-includes/js/dist/editor.js:24986
 #: wp-admin/includes/class-custom-background.php:357
@@ -367,7 +367,7 @@ msgstr "Les modèles basés sur des fichiers de thème ne peuvent pas être rév
 msgid "Whether to ignore sticky posts or not."
 msgstr "Ignorer les publications épinglées ou non."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:162
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:170
 #: wp-includes/script-loader.php:1032
 msgid "The web server cannot generate responsive image sizes for this image. Convert it to JPEG or PNG before uploading."
 msgstr "Le serveur web ne peut pas générer de tailles d‘image responsive pour cette image. Convertissez-la en JPEG ou PNG avant de la téléverser."
@@ -892,7 +892,7 @@ msgid "Disable"
 msgstr "Désactiver"
 
 #. translators: Hidden accessibility text.
-#: wp-includes/js/dist/editor.js:20571 wp-includes/js/dist/editor.js:32977
+#: wp-includes/js/dist/editor.js:20571 wp-includes/js/dist/editor.js:32976
 #: wp-admin/edit-form-comment.php:133
 msgid "Comment status"
 msgstr "État du commentaire"
@@ -1453,7 +1453,7 @@ msgid "Public facing script module IDs."
 msgstr "ID des modules de script affichés sur l’interface publique du site."
 
 #. translators: %s: attachment mime type
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:414
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:422
 msgid "This site does not support post thumbnails on attachments with MIME type %s."
 msgstr "Ce site ne prend pas en charge les miniatures de publications sur les fichiers joints de type MIME %s."
 
@@ -2326,14 +2326,14 @@ msgctxt "block category"
 msgid "Patterns"
 msgstr "Compositions"
 
-#: wp-includes/admin-bar.php:1127
+#: wp-includes/admin-bar.php:1136
 #: wp-admin/includes/class-custom-image-header.php:77
 #: wp-admin/includes/class-custom-image-header.php:78 wp-admin/menu.php:237
 msgctxt "custom image header"
 msgid "Header"
 msgstr "Entête"
 
-#: wp-includes/admin-bar.php:1113
+#: wp-includes/admin-bar.php:1122
 #: wp-admin/includes/class-custom-background.php:70
 #: wp-admin/includes/class-custom-background.php:71 wp-admin/menu.php:242
 msgctxt "custom background"
@@ -2461,8 +2461,8 @@ msgid "Style Variations"
 msgstr "Variations de styles"
 
 #: wp-includes/js/dist/block-editor.js:35084
-#: wp-includes/js/dist/block-editor.js:71832
-#: wp-includes/js/dist/block-editor.js:71837 wp-admin/widgets-form.php:300
+#: wp-includes/js/dist/block-editor.js:71827
+#: wp-includes/js/dist/block-editor.js:71832 wp-admin/widgets-form.php:300
 msgid "Position"
 msgstr "Emplacement"
 
@@ -5178,7 +5178,7 @@ msgid "Show on front"
 msgstr "Affichage en page d’accueil"
 
 #: wp-includes/post.php:299 wp-includes/js/dist/block-editor.js:57598
-#: wp-includes/js/dist/block-editor.js:65316
+#: wp-includes/js/dist/block-editor.js:65319
 msgid "Patterns list"
 msgstr "Liste des compositions"
 
@@ -5771,7 +5771,7 @@ msgstr "Nouveau modèle"
 #: wp-includes/js/dist/edit-site.js:10664
 #: wp-includes/js/dist/edit-site.js:38117
 #: wp-includes/js/dist/edit-site.js:40241 wp-includes/js/dist/editor.js:9949
-#: wp-includes/js/dist/editor.js:19845 wp-includes/js/dist/editor.js:33187
+#: wp-includes/js/dist/editor.js:19845 wp-includes/js/dist/editor.js:33186
 msgid "Templates"
 msgstr "Modèles"
 
@@ -5879,7 +5879,7 @@ msgstr "Texte"
 #. translators: Hidden accessibility text. %s: Total number of updates
 #. available.
 #. translators: %s: Total number of updates available.
-#: wp-includes/admin-bar.php:1154 wp-admin/js/updates.js:370
+#: wp-includes/admin-bar.php:1163 wp-admin/js/updates.js:370
 msgid "%s update available"
 msgid_plural "%s updates available"
 msgstr[0] "%s mise à jour disponible"
@@ -6188,71 +6188,71 @@ msgstr "Une extension a empêché la planification de l’évènement."
 msgid "Event timestamp must be a valid Unix timestamp."
 msgstr "L’horodatage de l’évènement doit être un horodatage Unix valide."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1562
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1570
 msgid "As a percentage of the image, the height to crop the image to. DEPRECATED: Use `modifiers` instead."
 msgstr "En pourcentage de l’image, la hauteur à laquelle il faut recadrer l’image. Obsolète : Utilisez `modifiers` à la place."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1556
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1564
 msgid "As a percentage of the image, the width to crop the image to. DEPRECATED: Use `modifiers` instead."
 msgstr "En pourcentage de l’image, la largeur à laquelle il faut recadrer l’image. Obsolète : Utilisez `modifiers` à la place."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1550
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1558
 msgid "As a percentage of the image, the y position to start the crop from. DEPRECATED: Use `modifiers` instead."
 msgstr "En pourcentage de l’image, la position Y à laquelle commencer le recadrage de l’image. Obsolète : utilisez `modifiers` à la place."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1544
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1552
 msgid "As a percentage of the image, the x position to start the crop from. DEPRECATED: Use `modifiers` instead."
 msgstr "En pourcentage de l’image, la position X à laquelle commencer le recadrage de l’image. Obsolète : utilisez `modifiers` à la place."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1536
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1544
 msgid "The amount to rotate the image clockwise in degrees. DEPRECATED: Use `modifiers` instead."
 msgstr "La valeur en degrés de la rotation de l’image dans le sens des aiguilles d’une montre. Obsolète : utilisez `modifiers` à la place."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1525
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1533
 msgid "Height of the crop as a percentage of the image height."
 msgstr "Hauteur du recadrage en pourcentage de la hauteur de l’image."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1521
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1529
 msgid "Width of the crop as a percentage of the image width."
 msgstr "Largeur du recadrage en pourcentage de la largeur de l’image."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1517
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1525
 msgid "Vertical position from the top to begin the crop as a percentage of the image height."
 msgstr "En pourcentage de l’image, la position verticale à partir du haut à laquelle commencer le recadrage de l’image."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1513
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1521
 msgid "Horizontal position from the left to begin the crop as a percentage of the image width."
 msgstr "Position horizontale à partir de la gauche pour commencer le recadrage en pourcentage de la largeur de l’image."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1503
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1511
 msgid "Crop arguments."
 msgstr "Arguments de recadrage."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1498
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1506
 msgid "Crop type."
 msgstr "Type de recadrage."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1487
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1495
 msgid "Angle to rotate clockwise in degrees."
 msgstr "Angle de rotation dans le sens horaire en degrés."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1480
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1488
 msgid "Rotation arguments."
 msgstr "Arguments de rotation."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1475
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1483
 msgid "Rotation type."
 msgstr "Type de rotation."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1472
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1480
 msgid "Rotation"
 msgstr "Rotation"
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1464
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1472
 msgid "Image edit."
 msgstr "Modification d’image."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1460
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1468
 msgid "Array of image edits."
 msgstr "Tableau des modifications d’images."
 
@@ -6372,8 +6372,8 @@ msgstr "&#8592; Aller à la médiathèque"
 
 #: wp-includes/js/dist/block-editor.js:28914
 #: wp-includes/js/dist/block-editor.js:29746
-#: wp-includes/js/dist/edit-site.js:36751 wp-includes/js/dist/editor.js:33963
-#: wp-includes/js/dist/editor.js:33965 wp-admin/menu.php:194
+#: wp-includes/js/dist/edit-site.js:36751 wp-includes/js/dist/editor.js:33962
+#: wp-includes/js/dist/editor.js:33964 wp-admin/menu.php:194
 msgid "Appearance"
 msgstr "Apparence"
 
@@ -6776,7 +6776,7 @@ msgstr "Élément de menu"
 msgid "Comment"
 msgstr "Commentaire"
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1495
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1503
 #: wp-includes/js/dist/block-library.js:27153
 #: wp-includes/js/dist/block-library.js:55443
 #: wp-admin/includes/image-edit.php:63
@@ -7072,31 +7072,31 @@ msgstr "Cette notification a été déclenchée par %s."
 msgid "Please consider writing more inclusive code."
 msgstr "Veuillez envisager d’écrire un code plus inclusif."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1454
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1462
 msgid "URL to the edited image file."
 msgstr "URL vers le fichier image modifié."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:664
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:672
 msgid "Unable to crop this image."
 msgstr "Impossible de recadrer cette image."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:642
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:650
 msgid "Unable to rotate this image."
 msgstr "Impossible de pivoter cette image."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:624
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:632
 msgid "Unable to edit this image."
 msgstr "Impossible de modifier cette image."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:603
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:611
 msgid "The image was not edited. Edit the image before applying the changes."
 msgstr "L’image n’a pas été modifiée. Modifiez l’image avant d’appliquer les modifications."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:568
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:576
 msgid "This type of file cannot be edited."
 msgstr "Ce type de fichier ne peut être modifié."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:558
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:566
 msgid "Unable to get meta information for file."
 msgstr "Impossible de récupérer les métadonnées du fichier."
 
@@ -7915,7 +7915,7 @@ msgctxt "file type group"
 msgid "Archives"
 msgstr "Archives"
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1071
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1079
 msgid "List of the missing image sizes of the attachment."
 msgstr "Listes des tailles d’image manquantes pour le fichier joint."
 
@@ -7932,14 +7932,14 @@ msgid "Filter media"
 msgstr "Filtrer les médias"
 
 #. translators: Hidden accessibility text.
-#: wp-includes/media-template.php:335 wp-includes/js/dist/block-editor.js:65221
+#: wp-includes/media-template.php:335 wp-includes/js/dist/block-editor.js:65224
 #: wp-admin/includes/class-wp-media-list-table.php:44
 msgid "Grid view"
 msgstr "Vue grille"
 
 #. translators: Hidden accessibility text.
-#: wp-includes/media-template.php:327 wp-includes/js/dist/block-editor.js:64671
-#: wp-includes/js/dist/block-editor.js:64705
+#: wp-includes/media-template.php:327 wp-includes/js/dist/block-editor.js:64674
+#: wp-includes/js/dist/block-editor.js:64708
 #: wp-admin/includes/class-wp-media-list-table.php:43
 msgid "List view"
 msgstr "Vue liste"
@@ -8569,13 +8569,13 @@ msgstr "Images supplémentaires ajoutées à cette galerie : %s"
 msgid "The current image has no alternative text. The file name is: %s"
 msgstr "L’image actuelle n’a pas de texte alternatif. Le nom du fichier est : %s"
 
-#: wp-includes/admin-bar.php:1225
+#: wp-includes/admin-bar.php:1234
 msgid "Exit Recovery Mode"
 msgstr "Sortir du mode de récupération"
 
 #. translators: Hidden accessibility text. %s: Number of comments.
 #. translators: %s: Number of comments.
-#: wp-includes/admin-bar.php:1039 wp-admin/includes/ajax-actions.php:500
+#: wp-includes/admin-bar.php:1048 wp-admin/includes/ajax-actions.php:500
 #: wp-admin/includes/ajax-actions.php:571
 #: wp-admin/includes/ajax-actions.php:1443 wp-admin/includes/dashboard.php:342
 #: wp-admin/menu.php:97
@@ -8733,7 +8733,7 @@ msgstr[1] "%s secondes"
 #. translators: %s: the number of minutes to read the post.
 #: wp-includes/formatting.php:3882 wp-includes/functions.php:562
 #: wp-includes/js/dist/block-library.js:46221
-#: wp-includes/js/dist/editor.js:32505
+#: wp-includes/js/dist/editor.js:32504
 msgid "%s minute"
 msgid_plural "%s minutes"
 msgstr[0] "%s minute"
@@ -8859,8 +8859,8 @@ msgid "Embeds"
 msgstr "Contenus embarqués"
 
 #: wp-includes/js/dist/editor.js:9787 wp-includes/js/dist/editor.js:20658
-#: wp-includes/js/dist/editor.js:20758 wp-includes/js/dist/editor.js:32947
-#: wp-includes/js/dist/editor.js:32968 wp-includes/js/dist/editor.js:33944
+#: wp-includes/js/dist/editor.js:20758 wp-includes/js/dist/editor.js:32946
+#: wp-includes/js/dist/editor.js:32967 wp-includes/js/dist/editor.js:33943
 #: wp-admin/includes/meta-boxes.php:1679 wp-admin/menu.php:392
 msgid "Discussion"
 msgstr "Commentaires"
@@ -9171,13 +9171,13 @@ msgstr "Le compte actuel peut épingler cette publication."
 msgid "The current user can publish this post."
 msgstr "Le compte actuel peut publier cette publication."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1436
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1444
 #: wp-admin/includes/ms.php:45
 msgid "You have used your space quota. Please delete files before uploading."
 msgstr "Vous avez utilisé votre quota d’espace. Veuillez supprimer des fichiers avant le téléversement."
 
 #. translators: %s: Required disk space in kilobytes.
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1416
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1424
 #: wp-admin/includes/ms.php:36
 msgid "Not enough space to upload. %s KB needed."
 msgstr "Pas assez d’espace pour téléverser. Il y a besoin de %s KB."
@@ -10563,11 +10563,11 @@ msgstr "Vous devez fournir une date future pour activer la planification."
 msgid "The previous set of changes has already been published. Please try saving your current set of changes again."
 msgstr "Le jeu de modifications précédent a déjà été publié. Veuillez réessayer d’enregistrer votre jeu de modification actuel."
 
-#: wp-includes/admin-bar.php:923
+#: wp-includes/admin-bar.php:932
 msgid "Edit User"
 msgstr "Modifier un compte"
 
-#: wp-includes/admin-bar.php:877
+#: wp-includes/admin-bar.php:886
 msgid "View User"
 msgstr "Prévisualiser le compte"
 
@@ -11247,23 +11247,23 @@ msgstr "Impossible d’afficher l’état."
 msgid "Invalid status."
 msgstr "État non valide."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1063
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1071
 msgid "URL to the original attachment file."
 msgstr "URL pour le fichier joint original."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1043
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1051
 msgid "The attachment MIME type."
 msgstr "Le type MIME du fichier joint."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1035
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1043
 msgid "Attachment type."
 msgstr "Type de fichier joint."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1012
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1020
 msgid "The attachment description."
 msgstr "La description du fichier joint."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:989
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:997
 msgid "The attachment caption."
 msgstr "La légende du fichier joint."
 
@@ -11676,19 +11676,19 @@ msgctxt "default site language"
 msgid "Site Default"
 msgstr "Valeur par défaut du site"
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1026
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1034
 msgid "HTML description for the attachment, transformed for display."
 msgstr "Description HTML de la pièce jointe, transformée pour l’affichage."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1021
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1029
 msgid "Description for the attachment, as it exists in the database."
 msgstr "Description du fichier joint, telle qu’elle existe dans la base de données."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1003
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1011
 msgid "HTML caption for the attachment, transformed for display."
 msgstr "Légende HTML pour le fichier joint, transformée pour l’affichage."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:998
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1006
 msgid "Caption for the attachment, as it exists in the database."
 msgstr "Légende pour le fichier joint, telle qu’elle existe dans la base de données."
 
@@ -12430,54 +12430,54 @@ msgstr "Paramètre de requête non autorisé : %s"
 msgid "Whether to bypass Trash and force deletion."
 msgstr "Que ce soit pour éviter la corbeille ou forcer la suppression."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1291
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1299
 msgid "Limit result set to attachments of a particular MIME type."
 msgstr "Limiter le groupe de résultats à un type MIME particulier."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1284
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1292
 msgid "Limit result set to attachments of a particular media type."
 msgstr "Limiter le groupe de résultats aux médias attachés d’un type particulier."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1159
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1167
 msgid "Could not open file handle."
 msgstr "Impossible d’ouvrir la manipulation de fichier."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1139
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1327
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1147
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1335
 msgid "Content hash did not match expected."
 msgstr "Le hachage de contenu ne correspondait pas aux attentes."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1126
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1134
 msgid "Invalid Content-Disposition supplied. Content-Disposition needs to be formatted as `attachment; filename=\"image.png\"` or similar."
 msgstr "Valeur Content-Disposition fournie non valide. Content-Disposition a besoin d’être formaté comme `attachment; filename=\"image.png\"` ou équivalent."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1116
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1124
 msgid "No Content-Disposition supplied."
 msgstr "Aucune valeur fournie pour Content-Disposition."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1108
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1116
 msgid "No Content-Type supplied."
 msgstr "Aucune valeur fournie pour Content-Type."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1100
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1313
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1108
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1321
 msgid "No data supplied."
 msgstr "Aucune donnée fournie."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1057
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1065
 msgid "The ID for the associated post of the attachment."
 msgstr "L’ID pour la publication associée au fichier."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1050
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1058
 msgid "Details about the media file, specific to its type."
 msgstr "Détails sur le fichier média, propre à son format."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:980
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:988
 msgid "Alternative text to display when attachment is not displayed."
 msgstr "Texte alternatif proposé si le fichier ne peut pas être affiché."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:183
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:433
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:191
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:441
 msgid "Invalid parent type."
 msgstr "Type de parent non valide."
 
@@ -12486,7 +12486,7 @@ msgid "Sorry, you are not allowed to upload media to this post."
 msgstr "Désolé, vous n’avez pas l’autorisation de téléverser des médias pour cette publication."
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:124
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:526
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:534
 msgid "Sorry, you are not allowed to upload media on this site."
 msgstr "Désolé, vous n’avez pas l’autorisation de téléverser des médias sur ce site."
 
@@ -12784,7 +12784,7 @@ msgid "Learn more about CSS"
 msgstr "En savoir plus sur le CSS (en anglais)"
 
 #: wp-includes/class-wp-customize-manager.php:5748
-#: wp-includes/js/dist/block-editor.js:73288
+#: wp-includes/js/dist/block-editor.js:73283
 #: wp-includes/js/dist/edit-site.js:12235
 #: wp-includes/js/dist/edit-site.js:24327
 msgid "Additional CSS"
@@ -15092,10 +15092,10 @@ msgstr "Couleur personnalisée"
 #: wp-includes/class-wp-editor.php:1277
 #: wp-includes/js/dist/block-editor.js:27632
 #: wp-includes/js/dist/block-editor.js:28096
-#: wp-includes/js/dist/block-editor.js:71907
-#: wp-includes/js/dist/block-editor.js:72300
-#: wp-includes/js/dist/block-editor.js:72430
-#: wp-includes/js/dist/block-editor.js:73485
+#: wp-includes/js/dist/block-editor.js:71902
+#: wp-includes/js/dist/block-editor.js:72295
+#: wp-includes/js/dist/block-editor.js:72425
+#: wp-includes/js/dist/block-editor.js:73480
 #: wp-includes/js/dist/edit-site.js:21101
 msgid "Color"
 msgstr "Couleur"
@@ -15147,7 +15147,7 @@ msgctxt "list style"
 msgid "Default"
 msgstr "Par défaut"
 
-#: wp-includes/admin-bar.php:954
+#: wp-includes/admin-bar.php:963
 msgctxt "add new from admin bar"
 msgid "Link"
 msgstr "Lien"
@@ -15899,8 +15899,8 @@ msgstr "Insérer la balise « Lire la suite… »"
 msgid "Toolbar Toggle"
 msgstr "Permuter la barre d’outils"
 
-#: wp-includes/js/dist/block-editor.js:71051
-#: wp-includes/js/dist/block-editor.js:71060
+#: wp-includes/js/dist/block-editor.js:71046
+#: wp-includes/js/dist/block-editor.js:71055
 #: wp-includes/js/dist/block-library.js:34446
 #: wp-includes/js/dist/customize-widgets.js:934
 #: wp-includes/js/dist/edit-widgets.js:4095 wp-includes/js/dist/editor.js:29684
@@ -16101,7 +16101,7 @@ msgid "Clear formatting"
 msgstr "Nettoyer la mise en forme"
 
 #: wp-includes/widgets/class-wp-widget-block.php:45
-#: wp-includes/js/dist/edit-widgets.js:3320 wp-includes/js/dist/editor.js:33304
+#: wp-includes/js/dist/edit-widgets.js:3320 wp-includes/js/dist/editor.js:33303
 msgid "Block"
 msgstr "Bloc"
 
@@ -16586,7 +16586,7 @@ msgstr "ID du compte non valide."
 msgid "Random Order"
 msgstr "Ordre aléatoire"
 
-#: wp-includes/media.php:5016 wp-includes/js/dist/block-editor.js:68520
+#: wp-includes/media.php:5016 wp-includes/js/dist/block-editor.js:68523
 msgid "Insert from URL"
 msgstr "Insérer à partir d’une URL"
 
@@ -16657,7 +16657,7 @@ msgid "Manage Video"
 msgstr "Gérer les vidéos"
 
 #: wp-includes/widgets/class-wp-widget-media-video.php:28
-#: wp-includes/js/dist/block-editor.js:68714
+#: wp-includes/js/dist/block-editor.js:68717
 #: wp-includes/js/dist/block-library.js:48875
 #: wp-includes/js/dist/block-library.js:65663
 #: wp-includes/js/dist/editor.js:21651
@@ -16695,7 +16695,7 @@ msgid "Insert into page"
 msgstr "Insérer dans la page"
 
 #: wp-includes/widgets/class-wp-widget-media-audio.php:28
-#: wp-includes/js/dist/block-editor.js:68710
+#: wp-includes/js/dist/block-editor.js:68713
 #: wp-includes/js/dist/block-library.js:48851
 #: wp-includes/js/dist/editor.js:10534 wp-includes/js/dist/editor.js:21627
 msgid "Audio"
@@ -16791,7 +16791,7 @@ msgstr "Déposez vos fichiers pour les téléverser"
 msgid "Create gallery"
 msgstr "Créer une galerie"
 
-#: wp-includes/media.php:4979 wp-includes/js/dist/block-editor.js:68792
+#: wp-includes/media.php:4979 wp-includes/js/dist/block-editor.js:68795
 #: wp-admin/includes/media.php:21 wp-admin/upload.php:204
 #: wp-admin/upload.php:358
 msgid "Media Library"
@@ -17024,7 +17024,7 @@ msgid "Header Text Color"
 msgstr "Couleur du texte d’entête"
 
 #: wp-includes/class-wp-customize-manager.php:5275
-#: wp-includes/js/dist/block-editor.js:73487
+#: wp-includes/js/dist/block-editor.js:73482
 #: wp-includes/js/dist/edit-site.js:11520
 #: wp-includes/js/dist/edit-site.js:20789
 #: wp-includes/js/dist/edit-site.js:22444
@@ -17048,7 +17048,7 @@ msgstr "Enregistrer &amp; publier"
 msgid "Select file"
 msgstr "Choisir un fichier"
 
-#: wp-includes/admin-bar.php:528
+#: wp-includes/admin-bar.php:537
 #: wp-includes/customize/class-wp-customize-theme-control.php:240
 #: wp-admin/customize.php:210
 #: wp-admin/includes/class-theme-upgrader-skin.php:92
@@ -17337,7 +17337,7 @@ msgstr "Les derniers articles"
 #: wp-includes/js/dist/core-commands.js:547
 #: wp-includes/js/dist/edit-site.js:6814 wp-includes/js/dist/edit-site.js:9284
 #: wp-includes/js/dist/edit-site.js:10647
-#: wp-includes/js/dist/edit-site.js:26673 wp-includes/js/dist/editor.js:33995
+#: wp-includes/js/dist/edit-site.js:26673 wp-includes/js/dist/editor.js:33994
 #: wp-admin/index.php:57
 msgid "Navigation"
 msgstr "Navigation"
@@ -17377,7 +17377,7 @@ msgstr "Type du lien vers l’image par défaut"
 msgid "Sorry, you are not allowed to edit this post."
 msgstr "Désolé, vous n’avez pas l’autorisation de modifier cet article."
 
-#: wp-includes/admin-bar.php:480 wp-admin/site-editor.php:316
+#: wp-includes/admin-bar.php:482 wp-admin/site-editor.php:316
 msgid "Edit Site"
 msgstr "Modifier le site"
 
@@ -17525,7 +17525,7 @@ msgstr "Une ou plusieurs tables de votre base de données sont indisponibles. La
 msgid "You are posting comments too quickly. Slow down."
 msgstr "Vous envoyez vos commentaires trop rapidement. Prenez votre temps."
 
-#: wp-includes/admin-bar.php:985 wp-includes/admin-bar.php:993
+#: wp-includes/admin-bar.php:994 wp-includes/admin-bar.php:1002
 msgctxt "admin bar menu group label"
 msgid "New"
 msgstr "Créer"
@@ -17670,12 +17670,12 @@ msgstr "Bleu"
 msgid "The timezone you have entered is not valid. Please select a valid timezone."
 msgstr "Le fuseau horaire ne semble pas être valide. Veuillez en choisir un valide."
 
-#: wp-includes/admin-bar.php:1016
+#: wp-includes/admin-bar.php:1025
 msgctxt "add new from admin bar"
 msgid "Site"
 msgstr "Site"
 
-#: wp-includes/admin-bar.php:978
+#: wp-includes/admin-bar.php:987
 msgctxt "add new from admin bar"
 msgid "User"
 msgstr "Compte"
@@ -17710,8 +17710,8 @@ msgstr "Votre compte est maintenant activé. <a href=\"%1$s\">Consultez votre si
 #: wp-includes/class-wp-editor.php:1266
 #: wp-includes/js/dist/block-editor.js:23583
 #: wp-includes/js/dist/block-editor.js:28110
-#: wp-includes/js/dist/block-editor.js:71488
-#: wp-includes/js/dist/block-editor.js:73476
+#: wp-includes/js/dist/block-editor.js:71483
+#: wp-includes/js/dist/block-editor.js:73471
 #: wp-includes/js/dist/block-library.js:5407
 #: wp-includes/js/dist/block-library.js:22588
 #: wp-includes/js/dist/block-library.js:22624
@@ -17914,7 +17914,7 @@ msgstr "Aucune publication trouvée dans la corbeille."
 msgid "No pages found."
 msgstr "Aucune page trouvée."
 
-#: wp-includes/admin-bar.php:776 wp-includes/admin-bar.php:781
+#: wp-includes/admin-bar.php:785 wp-includes/admin-bar.php:790
 msgid "Shortlink"
 msgstr "Lien court"
 
@@ -18006,7 +18006,7 @@ msgstr "Article non valide"
 msgid "Manage Site"
 msgstr "Gérer le site"
 
-#: wp-includes/admin-bar.php:742
+#: wp-includes/admin-bar.php:751
 msgid "Manage Comments"
 msgstr "Gérer les commentaires"
 
@@ -18045,7 +18045,7 @@ msgstr "Catégorie de liens"
 msgid "User"
 msgstr "Compte"
 
-#: wp-includes/admin-bar.php:582
+#: wp-includes/admin-bar.php:591
 msgid "Network Admin"
 msgstr "Admin du réseau"
 
@@ -18586,7 +18586,7 @@ msgstr "Résultats de recherche pour « %s »"
 msgid "One response to %s"
 msgstr "Une réponse à %s"
 
-#: wp-includes/admin-bar.php:1102
+#: wp-includes/admin-bar.php:1111
 #: wp-includes/class-wp-customize-nav-menus.php:675
 #: wp-includes/customize/class-wp-customize-nav-menus-panel.php:113
 #: wp-includes/js/dist/block-library.js:34420 wp-admin/menu.php:232
@@ -19032,7 +19032,7 @@ msgstr "sur"
 #: wp-includes/class-wp-editor.php:1222 wp-includes/script-loader.php:989
 #: wp-includes/widgets/class-wp-widget-media-image.php:28
 #: wp-includes/js/dist/block-editor.js:25415
-#: wp-includes/js/dist/block-editor.js:68712
+#: wp-includes/js/dist/block-editor.js:68715
 #: wp-includes/js/dist/block-library.js:27818
 #: wp-includes/js/dist/block-library.js:48860
 #: wp-includes/js/dist/editor.js:21636 wp-admin/includes/media.php:2958
@@ -19292,7 +19292,7 @@ msgstr "Que dois-je faire maintenant ?"
 
 #. translators: %s: Maximum allowed file size in kilobytes.
 #: wp-includes/ms-functions.php:2147
-#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1425
+#: wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:1433
 #: wp-admin/includes/ms.php:41
 msgid "This file is too big. Files must be less than %s KB in size."
 msgstr "Ce fichier est trop grand. La taille des fichiers doit être inférieure à %s Ko."
@@ -19416,12 +19416,12 @@ msgstr "Remplir l’écran"
 
 #: wp-includes/class-wp-editor.php:1263
 #: wp-includes/js/dist/block-editor.js:23928
-#: wp-includes/js/dist/block-editor.js:71474
+#: wp-includes/js/dist/block-editor.js:71469
 msgid "Remove link"
 msgstr "Retirer le lien"
 
 #: wp-includes/class-wp-editor.php:1267 wp-includes/script-loader.php:803
-#: wp-includes/js/dist/block-editor.js:71174
+#: wp-includes/js/dist/block-editor.js:71169
 msgid "Insert link"
 msgstr "Insérer un lien"
 
@@ -19509,8 +19509,8 @@ msgstr "Type"
 msgid "Constrain proportions"
 msgstr "Respecter les proportions"
 
-#: wp-includes/class-wp-editor.php:1224 wp-includes/js/dist/editor.js:33898
-#: wp-includes/js/dist/editor.js:34036
+#: wp-includes/class-wp-editor.php:1224 wp-includes/js/dist/editor.js:33897
+#: wp-includes/js/dist/editor.js:34035
 msgid "General"
 msgstr "Général"
 
@@ -19551,9 +19551,9 @@ msgstr "Espace vertical"
 
 #: wp-includes/class-wp-editor.php:1232
 #: wp-includes/js/dist/block-editor.js:32414
-#: wp-includes/js/dist/block-editor.js:71919
-#: wp-includes/js/dist/block-editor.js:72310
-#: wp-includes/js/dist/block-editor.js:72440
+#: wp-includes/js/dist/block-editor.js:71914
+#: wp-includes/js/dist/block-editor.js:72305
+#: wp-includes/js/dist/block-editor.js:72435
 msgid "Dimensions"
 msgstr "Dimensions"
 
@@ -19655,7 +19655,7 @@ msgid "Heading 1"
 msgstr "Titre 1"
 
 #: wp-includes/class-wp-editor.php:1153
-#: wp-includes/js/dist/block-editor.js:65059
+#: wp-includes/js/dist/block-editor.js:65062
 msgid "Paragraph"
 msgstr "Paragraphe"
 
@@ -19984,7 +19984,7 @@ msgstr "%s est une option protégée de WordPress, et ne peut être modifiée"
 
 #. translators: Used between list items, there is a space after the comma.
 #: wp-includes/class-wp-locale.php:241 wp-includes/l10n.php:1972
-#: wp-includes/js/dist/block-editor.js:73646
+#: wp-includes/js/dist/block-editor.js:73641
 msgid ", "
 msgstr ", "
 
@@ -20389,7 +20389,7 @@ msgstr "« Page précédente"
 msgid "Sorry, comments are closed for this item."
 msgstr "Les commentaires sont fermés pour cet article."
 
-#: wp-includes/admin-bar.php:1091
+#: wp-includes/admin-bar.php:1100
 #: wp-includes/class-wp-customize-widgets.php:419
 #: wp-includes/functions.php:5451 wp-includes/js/dist/blocks.js:8102
 #: wp-includes/js/dist/core-data.js:1579
@@ -20468,9 +20468,9 @@ msgstr "Par défaut"
 #: wp-includes/js/dist/block-editor.js:31767
 #: wp-includes/js/dist/block-editor.js:31962
 #: wp-includes/js/dist/block-editor.js:32032
-#: wp-includes/js/dist/block-editor.js:68193
-#: wp-includes/js/dist/block-editor.js:76553
-#: wp-includes/js/dist/block-editor.js:76559
+#: wp-includes/js/dist/block-editor.js:68196
+#: wp-includes/js/dist/block-editor.js:76548
+#: wp-includes/js/dist/block-editor.js:76554
 #: wp-includes/js/dist/block-library.js:44360
 #: wp-includes/js/dist/block-library.js:44371
 #: wp-includes/js/dist/block-library.js:58750
@@ -20509,7 +20509,7 @@ msgstr "E-mail"
 msgid "Site Title"
 msgstr "Titre du site"
 
-#: wp-includes/taxonomy.php:196 wp-includes/js/dist/block-editor.js:66474
+#: wp-includes/taxonomy.php:196 wp-includes/js/dist/block-editor.js:66477
 #: wp-includes/js/dist/blocks.js:8105 wp-includes/js/dist/edit-site.js:20615
 #: wp-includes/js/dist/edit-site.js:20966
 #: wp-includes/js/dist/edit-site.js:21037
@@ -20530,7 +20530,7 @@ msgstr "Activer"
 msgid "First Post"
 msgstr "Premier article"
 
-#: wp-includes/admin-bar.php:645 wp-includes/js/dist/block-editor.js:71721
+#: wp-includes/admin-bar.php:654 wp-includes/js/dist/block-editor.js:71716
 #: wp-includes/js/dist/block-library.js:1893
 #: wp-includes/js/dist/block-library.js:2277
 #: wp-includes/js/dist/block-library.js:3456
@@ -20588,11 +20588,11 @@ msgstr "Premier article"
 msgid "Settings"
 msgstr "Réglages"
 
-#: wp-includes/admin-bar.php:565 wp-admin/menu.php:34 wp-admin/my-sites.php:38
+#: wp-includes/admin-bar.php:574 wp-admin/menu.php:34 wp-admin/my-sites.php:38
 msgid "My Sites"
 msgstr "Mes sites"
 
-#: wp-includes/admin-bar.php:623 wp-includes/admin-bar.php:1076
+#: wp-includes/admin-bar.php:632 wp-includes/admin-bar.php:1085
 #: wp-includes/customize/class-wp-customize-themes-panel.php:81
 #: wp-includes/taxonomy.php:195 wp-includes/js/dist/core-data.js:1650
 #: wp-admin/includes/ms.php:1078 wp-admin/themes.php:127
@@ -20603,7 +20603,7 @@ msgid "Themes"
 msgstr "Thèmes"
 
 #. translators: Sites menu item.
-#: wp-includes/admin-bar.php:601
+#: wp-includes/admin-bar.php:610
 #: wp-admin/includes/class-wp-ms-users-list-table.php:197
 #: wp-admin/network/menu.php:56 wp-admin/network/sites.php:21
 #: wp-admin/network/sites.php:388
@@ -20636,8 +20636,8 @@ msgid "Strength indicator"
 msgstr "Indicateur de robustesse"
 
 #. translators: Network menu item.
-#: wp-includes/admin-bar.php:433 wp-includes/admin-bar.php:591
-#: wp-includes/admin-bar.php:711 wp-includes/deprecated.php:2822
+#: wp-includes/admin-bar.php:433 wp-includes/admin-bar.php:600
+#: wp-includes/admin-bar.php:720 wp-includes/deprecated.php:2822
 #: wp-includes/deprecated.php:2824 wp-admin/index.php:33 wp-admin/menu.php:29
 #: wp-admin/my-sites.php:142 wp-admin/user/menu.php:15
 #: wp-admin/includes/class-wp-ms-sites-list-table.php:748
@@ -20660,9 +20660,9 @@ msgstr "<strong>Erreur :</strong> veuillez renseigner l’identifiant."
 #: wp-includes/widgets/class-wp-widget-media-image.php:78
 #: wp-includes/js/dist/block-editor.js:31962
 #: wp-includes/js/dist/block-editor.js:32032
-#: wp-includes/js/dist/block-editor.js:68186
-#: wp-includes/js/dist/block-editor.js:76537
-#: wp-includes/js/dist/block-editor.js:76543
+#: wp-includes/js/dist/block-editor.js:68189
+#: wp-includes/js/dist/block-editor.js:76532
+#: wp-includes/js/dist/block-editor.js:76538
 #: wp-includes/js/dist/block-library.js:5228
 #: wp-includes/js/dist/block-library.js:5236
 #: wp-includes/js/dist/block-library.js:7783
@@ -20777,8 +20777,8 @@ msgstr "Sélectionner"
 #: wp-includes/class-wp-customize-manager.php:5742
 #: wp-includes/class-wp-editor.php:1189 wp-includes/class-wp-editor.php:1886
 #: wp-includes/script-loader.php:991 wp-includes/script-loader.php:1314
-#: wp-includes/script-loader.php:1998 wp-includes/js/dist/block-editor.js:71193
-#: wp-includes/js/dist/block-editor.js:72948
+#: wp-includes/script-loader.php:1998 wp-includes/js/dist/block-editor.js:71188
+#: wp-includes/js/dist/block-editor.js:72943
 #: wp-includes/js/dist/block-library.js:34674
 #: wp-includes/js/dist/block-library.js:37031
 #: wp-includes/js/dist/components.js:34659
@@ -20860,7 +20860,7 @@ msgid "Version"
 msgstr "Version"
 
 #. translators: Hidden accessibility text.
-#: wp-includes/admin-bar.php:1187 wp-includes/admin-bar.php:1189
+#: wp-includes/admin-bar.php:1196 wp-includes/admin-bar.php:1198
 #: wp-includes/blocks/search.php:27 wp-includes/blocks/search.php:28
 #: wp-includes/blocks/search.php:52 wp-includes/class-wp-editor.php:1909
 #: wp-includes/media.php:4959 wp-includes/js/dist/block-editor.js:49056
@@ -20975,7 +20975,7 @@ msgstr "URL de l’image"
 #: wp-includes/js/dist/edit-site.js:35025
 #: wp-includes/js/dist/edit-site.js:35595
 #: wp-includes/js/dist/edit-site.js:37380
-#: wp-includes/js/dist/edit-site.js:40887 wp-includes/js/dist/editor.js:32240
+#: wp-includes/js/dist/edit-site.js:40887 wp-includes/js/dist/editor.js:32239
 #: wp-admin/includes/media.php:2597
 #: wp-admin/includes/class-wp-ms-sites-list-table.php:374
 msgid "Actions"
@@ -20984,11 +20984,11 @@ msgstr "Actions"
 #. translators: Default privacy policy heading.
 #: wp-includes/class-wp-editor.php:1239 wp-includes/media.php:4956
 #: wp-includes/media.php:5645 wp-includes/js/dist/block-editor.js:51891
-#: wp-includes/js/dist/block-editor.js:68708
+#: wp-includes/js/dist/block-editor.js:68711
 #: wp-includes/js/dist/block-library.js:55689
 #: wp-includes/js/dist/blocks.js:8096 wp-includes/js/dist/core-data.js:1543
 #: wp-includes/js/dist/edit-site.js:22452
-#: wp-includes/js/dist/edit-site.js:22467 wp-includes/js/dist/editor.js:34033
+#: wp-includes/js/dist/edit-site.js:22467 wp-includes/js/dist/editor.js:34032
 #: wp-admin/export.php:311
 #: wp-admin/includes/class-wp-privacy-policy-content.php:508
 #: wp-admin/includes/media.php:2595 wp-admin/menu.php:71 wp-admin/menu.php:393
@@ -21004,7 +21004,7 @@ msgstr "Modifier l’image"
 #: wp-includes/media-template.php:645 wp-includes/media-template.php:793
 #: wp-includes/media-template.php:1084 wp-includes/media-template.php:1147
 #: wp-includes/widgets/class-wp-widget-media-image.php:91
-#: wp-includes/js/dist/block-editor.js:73475 wp-admin/includes/media.php:1405
+#: wp-includes/js/dist/block-editor.js:73470 wp-admin/includes/media.php:1405
 #: wp-admin/includes/media.php:3263
 msgid "Caption"
 msgstr "Légende"
@@ -21111,8 +21111,8 @@ msgstr "Le fichier « %s » n’existe pas ?"
 msgid "Thumbnail"
 msgstr "Miniature"
 
-#: wp-includes/js/dist/block-editor.js:74176
-#: wp-includes/js/dist/block-editor.js:74183
+#: wp-includes/js/dist/block-editor.js:74171
+#: wp-includes/js/dist/block-editor.js:74178
 #: wp-admin/includes/image-edit.php:64 wp-admin/includes/image-edit.php:161
 msgid "Scale"
 msgstr "Redimensionner"
@@ -21204,9 +21204,9 @@ msgid "Tags"
 msgstr "Étiquettes"
 
 #. translators: accessibility text for the content landmark region.
-#: wp-includes/revision.php:33 wp-includes/js/dist/block-editor.js:72421
+#: wp-includes/revision.php:33 wp-includes/js/dist/block-editor.js:72416
 #: wp-includes/js/dist/edit-widgets.js:1443 wp-includes/js/dist/editor.js:12854
-#: wp-includes/js/dist/editor.js:33360 wp-includes/js/dist/editor.js:33415
+#: wp-includes/js/dist/editor.js:33359 wp-includes/js/dist/editor.js:33414
 #: wp-admin/includes/dashboard.php:598 wp-admin/index.php:104
 msgid "Content"
 msgstr "Contenu"
@@ -21217,10 +21217,10 @@ msgstr "Contenu"
 #: wp-includes/js/dist/block-editor.js:50778
 #: wp-includes/js/dist/block-editor.js:58918
 #: wp-includes/js/dist/block-editor.js:59195
-#: wp-includes/js/dist/block-editor.js:67971
-#: wp-includes/js/dist/block-editor.js:68757
+#: wp-includes/js/dist/block-editor.js:67974
 #: wp-includes/js/dist/block-editor.js:68760
-#: wp-includes/js/dist/block-editor.js:74080
+#: wp-includes/js/dist/block-editor.js:68763
+#: wp-includes/js/dist/block-editor.js:74075
 #: wp-includes/js/dist/block-library.js:7034
 #: wp-includes/js/dist/block-library.js:40298
 #: wp-includes/js/dist/block-library.js:63030
@@ -21242,7 +21242,7 @@ msgstr "Contenu"
 #: wp-includes/js/dist/editor.js:8449 wp-includes/js/dist/editor.js:8595
 #: wp-includes/js/dist/editor.js:14335 wp-includes/js/dist/editor.js:17626
 #: wp-includes/js/dist/editor.js:18680 wp-includes/js/dist/editor.js:25373
-#: wp-includes/js/dist/editor.js:31853 wp-includes/js/dist/editor.js:32000
+#: wp-includes/js/dist/editor.js:31852 wp-includes/js/dist/editor.js:31999
 #: wp-includes/js/dist/patterns.js:653 wp-includes/js/dist/patterns.js:841
 #: wp-includes/js/dist/patterns.js:1257 wp-includes/js/dist/patterns.js:1338
 #: wp-includes/js/dist/patterns.js:1380
@@ -21263,7 +21263,7 @@ msgstr "Contenu"
 msgid "Cancel"
 msgstr "Annuler"
 
-#: wp-includes/admin-bar.php:447 wp-includes/admin-bar.php:634
+#: wp-includes/admin-bar.php:447 wp-includes/admin-bar.php:643
 #: wp-includes/js/dist/block-editor.js:53584
 #: wp-includes/js/dist/core-data.js:1660 wp-includes/js/dist/editor.js:29679
 #: wp-admin/plugins.php:634 wp-admin/update-core.php:469
@@ -21304,7 +21304,7 @@ msgid "RSS"
 msgstr "Flux"
 
 #: wp-includes/js/dist/block-editor.js:24462
-#: wp-includes/js/dist/block-editor.js:71203
+#: wp-includes/js/dist/block-editor.js:71198
 #: wp-includes/js/dist/block-library.js:20478
 #: wp-admin/includes/dashboard.php:1398 wp-admin/setup-config.php:272
 msgid "Submit"
@@ -21324,7 +21324,7 @@ msgstr "Anonyme"
 msgid "Done"
 msgstr "Terminé"
 
-#: wp-includes/admin-bar.php:612 wp-admin/includes/ms.php:866
+#: wp-includes/admin-bar.php:621 wp-admin/includes/ms.php:866
 #: wp-admin/includes/ms.php:1073 wp-admin/menu.php:323 wp-admin/users.php:25
 #: wp-admin/includes/class-wp-ms-sites-list-table.php:370
 #: wp-admin/network/menu.php:60 wp-admin/network/users.php:34
@@ -21405,7 +21405,7 @@ msgid "Name"
 msgstr "Nom"
 
 #: wp-includes/class-wp-editor.php:1225
-#: wp-includes/js/dist/block-editor.js:71758
+#: wp-includes/js/dist/block-editor.js:71753
 #: wp-includes/js/dist/edit-post.js:2178 wp-includes/js/dist/edit-site.js:12884
 #: wp-admin/edit-link-form.php:34
 msgid "Advanced"
@@ -21466,7 +21466,7 @@ msgstr "Modifier la catégorie de lien"
 
 #: wp-includes/js/dist/block-editor.js:59672
 #: wp-includes/js/dist/block-editor.js:61417
-#: wp-includes/js/dist/block-editor.js:74085
+#: wp-includes/js/dist/block-editor.js:74080
 #: wp-includes/js/dist/block-library.js:34965
 #: wp-includes/js/dist/edit-site.js:14775
 #: wp-includes/js/dist/edit-site.js:14821
@@ -21522,7 +21522,7 @@ msgstr "Révisions"
 #. translators: Hidden accessibility text.
 #: wp-includes/revision.php:34 wp-includes/js/dist/block-library.js:29059
 #: wp-includes/js/dist/editor.js:21007 wp-includes/js/dist/editor.js:21068
-#: wp-includes/js/dist/editor.js:33938 wp-admin/includes/meta-boxes.php:750
+#: wp-includes/js/dist/editor.js:33937 wp-admin/includes/meta-boxes.php:750
 #: wp-admin/includes/meta-boxes.php:1642 wp-admin/options-reading.php:193
 msgid "Excerpt"
 msgstr "Extrait"
@@ -21533,7 +21533,7 @@ msgstr "Attributs"
 
 #. translators: accessibility text for the publish landmark region.
 #: wp-includes/class-wp-customize-manager.php:4864
-#: wp-includes/script-loader.php:1301 wp-includes/js/dist/block-editor.js:72992
+#: wp-includes/script-loader.php:1301 wp-includes/js/dist/block-editor.js:72987
 #: wp-includes/js/dist/edit-widgets.js:1449 wp-includes/js/dist/editor.js:12860
 #: wp-includes/js/dist/editor.js:22464 wp-includes/js/dist/editor.js:22472
 #: wp-includes/js/dist/editor.js:22850 wp-includes/js/dist/editor.js:26045
@@ -21566,9 +21566,9 @@ msgstr "Commentaires"
 #: wp-includes/class-wp-customize-widgets.php:804
 #: wp-includes/class-wp-editor.php:1396 wp-includes/media.php:5001
 #: wp-includes/js/dist/block-editor.js:58925
-#: wp-includes/js/dist/block-editor.js:67968
-#: wp-includes/js/dist/block-editor.js:68325
-#: wp-includes/js/dist/block-editor.js:68480
+#: wp-includes/js/dist/block-editor.js:67971
+#: wp-includes/js/dist/block-editor.js:68328
+#: wp-includes/js/dist/block-editor.js:68483
 #: wp-includes/js/dist/block-library.js:53661
 #: wp-includes/js/dist/block-library.js:57759
 #: wp-includes/js/dist/block-library.js:65390
@@ -21582,7 +21582,7 @@ msgid "Apply"
 msgstr "Appliquer"
 
 #: wp-includes/class-wp-editor.php:1184
-#: wp-includes/js/dist/block-editor.js:66214
+#: wp-includes/js/dist/block-editor.js:66217
 #: wp-includes/js/dist/customize-widgets.js:1023
 #: wp-includes/js/dist/edit-post.js:1072 wp-includes/js/dist/edit-post.js:2479
 #: wp-includes/js/dist/edit-site.js:6615
@@ -21642,7 +21642,7 @@ msgstr "Restaurer"
 #: wp-includes/class-walker-comment.php:260
 #: wp-includes/class-walker-comment.php:459
 #: wp-includes/class-wp-editor.php:1394
-#: wp-includes/js/dist/block-editor.js:68284
+#: wp-includes/js/dist/block-editor.js:68287
 #: wp-includes/js/dist/block-library.js:7006
 #: wp-includes/js/dist/block-library.js:9423
 #: wp-includes/js/dist/block-library.js:10667
@@ -21652,7 +21652,7 @@ msgstr "Restaurer"
 #: wp-includes/js/dist/block-library.js:40614
 #: wp-includes/js/dist/block-library.js:63869
 #: wp-includes/js/dist/block-library.js:65284
-#: wp-includes/js/dist/edit-post.js:3137 wp-includes/js/dist/edit-site.js:25009
+#: wp-includes/js/dist/edit-post.js:3151 wp-includes/js/dist/edit-site.js:25009
 #: wp-includes/js/dist/edit-site.js:25574
 #: wp-includes/js/dist/edit-site.js:25935
 #: wp-includes/js/dist/edit-site.js:37454 wp-admin/comment.php:251
@@ -21707,7 +21707,7 @@ msgstr "Commentaire"
 #: wp-includes/sitemaps/class-wp-sitemaps-stylesheet.php:176
 #: wp-includes/widgets/class-wp-widget-media-image.php:113
 #: wp-includes/js/dist/block-editor.js:22786
-#: wp-includes/js/dist/block-editor.js:68469
+#: wp-includes/js/dist/block-editor.js:68472
 #: wp-includes/js/dist/block-library.js:18678 wp-admin/comment.php:196
 #: wp-admin/edit-form-comment.php:69
 #: wp-admin/includes/class-walker-nav-menu-edit.php:198
@@ -21751,7 +21751,7 @@ msgstr "Auteur/autrice"
 msgid "Log Out"
 msgstr "Se déconnecter"
 
-#: wp-includes/admin-bar.php:412 wp-includes/admin-bar.php:752
+#: wp-includes/admin-bar.php:412 wp-includes/admin-bar.php:761
 #: wp-includes/deprecated.php:2820
 msgid "Visit Site"
 msgstr "Aller sur le site"
