@@ -21,6 +21,7 @@ class ZippyCore
         add_action('admin_head', [$this, 'adminHead']);
         add_action('admin_enqueue_scripts', [$this, 'adminEnqueueScripts']);
         add_action('admin_footer', [$this, 'adminFooter']);
+        add_action('admin_notices', [$this, 'displayAdminNotices']);
         add_action('plugins_loaded', [$this, 'pluginsLoaded']);
     }
 
@@ -49,7 +50,7 @@ class ZippyCore
      */
     public function rowActions($actions, $post)
     {
-        if (current_user_can('read')) {
+        if (current_user_can('edit_pages')) {
             $url = add_query_arg(['__action' => 'zippy-zip', 'post_id' => $post->ID]);
             $actions['zippy_zip'] = '<a href="' . esc_url($url) . '">' . __('Archive (Zippy)', 'zippy') . '</a>';
         }
@@ -181,6 +182,10 @@ class ZippyCore
 
         if (isset($_REQUEST['__action']) && $_REQUEST['__action'] === 'zippy-unzip') {
 
+            if (!wp_verify_nonce($_POST['zippy_nonce'] ?? '', 'zippy_unzip_action')) {
+                wp_die(__('Security check failed. Please try again.', 'zippy'));
+            }
+
             if (!class_exists('ZipArchive')) {
                 $this->adminNotice(__('Zip functionality is not available on the server!', 'zippy'), 'error');
                 return;
@@ -226,6 +231,7 @@ class ZippyCore
                 if (isset($uploadedFile['file'])) {
 
                     $result = self::unzipPosts($uploadedFile['file'], $options);
+                    unlink($uploadedFile['file']);
 
                     if (!empty($result['errors'])) {
                         $this->adminNotice(implode('<br />', $result['errors']), 'error');
@@ -240,8 +246,6 @@ class ZippyCore
                     if (!empty($notices)) {
                         $this->adminNotice(implode('<br />', $notices), 'success');
                     }
-
-                    unlink($uploadedFile['file']);
                 }
             }
         }
@@ -1072,11 +1076,9 @@ class ZippyCore
                 }
 
                 // IMPORT ATTACHMENTS /////////////////////////////////////////////////////////////////////////////////
-
                 if ($options['importMedia']) {
 
                     $processedAttachments = [];
-                    $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'tiff', 'tif', 'ico', 'webp', 'pdf', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'odt', 'ods', 'odp', 'zip', 'rar', '7z', 'tar', 'gz', 'mp3', 'wav', 'mp4', 'avi', 'mov', 'wmv', 'mpg', 'mpeg', 'webm', 'ogg', 'ogv', 'm4v', '3gp', '3g2', 'txt', 'rtf'];
 
                     if (!empty($data['attachments'])) {
 
@@ -1092,10 +1094,27 @@ class ZippyCore
 
                             // extract file
                             $attachmentPath = $attachment->rurl;
-                            $file = $uploadsDir . DIRECTORY_SEPARATOR . self::fixPath($attachmentPath);
-                            $fileInfo = pathinfo($file);
 
-                            if (!in_array(strtolower($fileInfo['extension']), $allowedExtensions)) {
+                            // SECURITY: Validate file extension using whitelist
+                            if (!self::isFileExtensionSafe($attachmentPath)) {
+                                $result['errors'][] = sprintf(__('Skipped unsafe attachment: %s (extension not allowed)', 'zippy'), esc_html($attachmentPath));
+                                continue;
+                            }
+
+                            // SECURITY: Validate file path
+                            if (!self::isFilePathSafe($attachmentPath)) {
+                                $result['errors'][] = sprintf(__('Skipped unsafe attachment path: %s', 'zippy'), esc_html($attachmentPath));
+                                continue;
+                            }
+
+                            $file = $uploadsDir . DIRECTORY_SEPARATOR . self::fixPath($attachmentPath);
+
+                            // Additional path validation
+                            $uploadsRealPath = realpath($uploadsDir);
+                            $targetRealPath = realpath(dirname($file));
+
+                            if ($targetRealPath === false || strpos($targetRealPath, $uploadsRealPath) !== 0) {
+                                $result['errors'][] = sprintf(__('Skipped attachment outside uploads directory: %s', 'zippy'), esc_html($attachmentPath));
                                 continue;
                             }
 
@@ -1162,21 +1181,35 @@ class ZippyCore
                     // IMPORT IMAGES /////////////////////////////////////////////////////////////////////////////////
 
                     if (!empty($data['images'])) {
-
                         $images = apply_filters('zippy-unzip-images', $data['images'], $content);
-                        $dangerousExtensions = ['php', 'exe', 'js', 'html', 'htm', 'bat', 'sh', 'jsp', 'asp', 'aspx'];
 
                         foreach ($images as $image) {
 
-                            $fileInfo = pathinfo($image);
+                            // SECURITY: Validate file extension using whitelist
+                            if (!self::isFileExtensionSafe($image)) {
+                                $result['errors'][] = sprintf(__('Skipped unsafe file: %s (extension not allowed)', 'zippy'), esc_html($image));
+                                continue;
+                            }
 
-                            if (in_array(strtolower($fileInfo['extension']), $dangerousExtensions)) {
+                            // SECURITY: Validate file path to prevent directory traversal
+                            if (!self::isFilePathSafe($image)) {
+                                $result['errors'][] = sprintf(__('Skipped unsafe file path: %s', 'zippy'), esc_html($image));
                                 continue;
                             }
 
                             $path = self::fixPath(wp_upload_dir()['basedir']);
+                            $targetPath = $path . DIRECTORY_SEPARATOR . $image;
 
-                            if ($options['replaceExists'] || !file_exists($path . DIRECTORY_SEPARATOR . $image)) {
+                            // Additional security: ensure target is within uploads directory
+                            $uploadsRealPath = realpath($path);
+                            $targetRealPath = realpath(dirname($targetPath));
+
+                            if ($targetRealPath === false || strpos($targetRealPath, $uploadsRealPath) !== 0) {
+                                $result['errors'][] = sprintf(__('Skipped file outside uploads directory: %s', 'zippy'), esc_html($image));
+                                continue;
+                            }
+
+                            if ($options['replaceExists'] || !file_exists($targetPath)) {
                                 $zip->extractTo($path, $image);
                             }
                         }
@@ -1209,7 +1242,7 @@ class ZippyCore
 
                 clean_post_cache($postId);
                 flush_rewrite_rules();
-		        wp_cache_flush();
+                wp_cache_flush();
             }
 
         } catch (\Exception $e) {
@@ -1253,16 +1286,36 @@ class ZippyCore
      */
     private function adminNotice($message, $type)
     {
-        add_action('admin_notices', static function () use ($message, $type) {
-            $htmlMessages = is_array($message) ? $message : [$message];
-            ?>
-            <div class="notice notice-<?php echo esc_attr($type); ?> is-dismissible">
-                <?php foreach ($htmlMessages as $html) { ?>
-                    <p><?php echo wp_kses_post($html); ?></p>
-                <?php } ?>
-            </div>
-            <?php
-        });
+        $notices = get_transient('zippy_admin_notices_' . get_current_user_id()) ?: [];
+        $notices[] = [
+            'message' => $message,
+            'type'    => $type,
+        ];
+
+        set_transient('zippy_admin_notices_' . get_current_user_id(), $notices, 30);
+    }
+
+    /**
+     * Display admin notices from transients
+     * Add this to constructor: add_action('admin_notices', [$this, 'displayAdminNotices']);
+     */
+    public function displayAdminNotices()
+    {
+        $notices = get_transient('zippy_admin_notices_' . get_current_user_id());
+        if ($notices) {
+            foreach ($notices as $notice) {
+                $htmlMessages = is_array($notice['message']) ? $notice['message'] : [$notice['message']];
+                ?>
+                <div class="notice notice-<?php echo esc_attr($notice['type']); ?> is-dismissible">
+                    <?php foreach ($htmlMessages as $html) { ?>
+                        <p><?php echo wp_kses_post($html); ?></p>
+                    <?php } ?>
+                </div>
+                <?php
+            }
+
+            delete_transient('zippy_admin_notices_' . get_current_user_id());
+        }
     }
 
     /**
@@ -1361,7 +1414,10 @@ class ZippyCore
             $ptList .= '<option value="' . esc_attr($key) . '">' . esc_html($item) . '</option>';
         }
 
+        $nonce_field = wp_nonce_field('zippy_unzip_action', 'zippy_nonce', true, false);
+
         return '<form action="" method="post" enctype="multipart/form-data" autocomplete="off">' .
+               $nonce_field .
                '<h3>' . __('Select zip archive to extract', 'zippy') . '</h3>' .
                '<p><input type="file" name="zippyFile[]" multiple /></p>' .
                '<p><label for="zippyCustomPT">' . __('Change post type to:', 'zippy') . '<br /><select name="customPT" id="zippyCustomPT">' . $ptList . '</select></label></p>' .
@@ -1394,5 +1450,108 @@ class ZippyCore
     public function pluginsLoaded()
     {
         load_plugin_textdomain('zippy', false, dirname(plugin_basename(__FILE__)) . '/languages');
+    }
+
+    /**
+     * Validate if file extension is safe for upload
+     * Uses whitelist approach for maximum security
+     *
+     * @since 1.6.13
+     * @param string $filename The filename to validate
+     * @return bool True if safe, false if dangerous
+     */
+    private static function isFileExtensionSafe($filename)
+    {
+        $fileInfo = pathinfo($filename);
+        $extension = strtolower($fileInfo['extension'] ?? '');
+
+        $safeExtensions = [
+            // Images
+            'jpg',
+            'jpeg',
+            'png',
+            'gif',
+            'bmp',
+            'webp',
+            'ico',
+            'svg',
+            // Documents
+            'pdf',
+            'doc',
+            'docx',
+            'xls',
+            'xlsx',
+            'ppt',
+            'pptx',
+            'odt',
+            'ods',
+            'odp',
+            'txt',
+            'rtf',
+            // Media
+            'mp3',
+            'wav',
+            'mp4',
+            'avi',
+            'mov',
+            'wmv',
+            'mpg',
+            'mpeg',
+            'webm',
+            'ogg',
+            'ogv',
+            'm4v',
+            '3gp',
+            '3g2',
+            // Archives (be careful with these)
+            'zip',
+            'rar',
+            '7z',
+            'tar',
+            'gz'
+        ];
+
+        $safeExtensions = apply_filters('zippy_safe_extensions', $safeExtensions);
+
+        return in_array($extension, $safeExtensions);
+    }
+
+    /**
+     * Validate file path to prevent directory traversal
+     *
+     * @since 1.6.13
+     * @param string $filePath The file path to validate
+     * @return bool True if safe, false if dangerous
+     */
+    private static function isFilePathSafe($filePath)
+    {
+        $normalizedPath = str_replace(['\\', '/'], DIRECTORY_SEPARATOR, $filePath);
+
+        // Check for directory traversal attempts
+        if (strpos($normalizedPath, '..') !== false) {
+            return false;
+        }
+
+        // Ensure path doesn't start with / or \ (absolute paths)
+        if (strpos($normalizedPath, DIRECTORY_SEPARATOR) === 0) {
+            return false;
+        }
+
+        // Additional checks for suspicious patterns
+        $dangerousPatterns = [
+            '.htaccess',
+            '.htpasswd',
+            'wp-config',
+            'index.php',
+            'functions.php'
+        ];
+
+        foreach ($dangerousPatterns as $pattern) {
+            if (stripos($normalizedPath, $pattern) !== false) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

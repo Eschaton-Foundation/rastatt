@@ -1,11 +1,13 @@
 === Zippy ===
-Contributors: loyaltymanufaktur
+Contributors: loyaltymanufaktur, madeinua
 Tags: backup, migration, zip files, archive, custom post types
 Requires at least: 4.9
 Tested up to: 6.8
-Stable tag: 1.6.12
+Stable tag: 1.7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Incredibly easy solution to archive pages and posts as zip file and unpack them back even on the other website!
 
 == Description ==
 
@@ -63,6 +65,14 @@ Be sure that your user account has permissions to edit posts ("edit_post" capabi
 1. Links to archive the post and to extract
 
 == Changelog ==
+
+= 1.7.0 =
+* Security update: Fixed arbitrary file upload vulnerability.
+* Security update: Fixed CSRF vulnerability in archive import function.
+* Enhanced file validation with secure whitelist approach for file extensions.
+* Added comprehensive path traversal protection.
+* Added CSRF protection with nonce verification.
+* Improved error handling and security logging.
 
 = 1.6.12 =
 * Tested up to Wordpress 6.8.
