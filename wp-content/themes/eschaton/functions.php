@@ -122,6 +122,7 @@ function mod_translation_textarea($hook)
 
 if( function_exists('pll_register_string') ) {
 	pll_register_string( 'eschaton', 'All' );
+	pll_register_string( 'eschaton', 'Tickets' );
 }
 
 
