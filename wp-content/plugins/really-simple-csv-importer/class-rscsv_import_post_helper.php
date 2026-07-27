@@ -168,7 +168,12 @@ class RSCSV_Import_Post_Helper
                     if (strpos($key, 'field_') === 0) {
                         $fobj = get_field_object($key);
                         if (is_array($fobj) && isset($fobj['key']) && $fobj['key'] == $key) {
-                            $this->acfUpdateField($key, $value);
+                            $post = get_post($fobj['parent']);
+                            if($post && $post->post_type === 'acf-field') {
+                                $this->acfUpdateField($post->post_name, [$key => $value]);
+                            } else {
+                                $this->acfUpdateField($key, $value);
+                            }
                             $is_acf = 1;
                         }
                     }
@@ -328,6 +333,15 @@ class RSCSV_Import_Post_Helper
         if ($post instanceof WP_Post) {
             if (parse_url($file, PHP_URL_SCHEME)) {
                 $file = $this->remoteGet($file);
+                if (!$file) {
+                    return false;
+                }
+            }
+            // A thumbnail must be an image
+            $wp_filetype = wp_check_filetype_and_ext($file, basename($file));
+            if (empty($wp_filetype['type']) || strpos($wp_filetype['type'], 'image/') !== 0) {
+                $this->addError('invalid_thumbnail_type', sprintf(__('The file "%s" is not an image and cannot be used as a thumbnail.', 'really-simple-csv-importer'), esc_html(basename($file))));
+                return false;
             }
             $thumbnail_id = $this->setAttachment($file);
             if ($thumbnail_id) {
@@ -360,6 +374,12 @@ class RSCSV_Import_Post_Helper
             $filename       = ($proper_filename) ? $proper_filename : $filename;
             $filename       = sanitize_file_name($filename);
 
+            // Reject disallowed file types to prevent arbitrary file upload
+            if ( !$ext || !$type || !in_array($type, get_allowed_mime_types(), true) ) {
+                $this->addError('invalid_file_type', sprintf(__('The file "%s" has a file type that is not permitted for security reasons.', 'really-simple-csv-importer'), esc_html($filename)));
+                return 0;
+            }
+
             $upload_dir     = wp_upload_dir();
             $guid           = $upload_dir['baseurl'] . '/' . _wp_relative_upload_path($file);
 
@@ -369,7 +389,7 @@ class RSCSV_Import_Post_Helper
                 'post_title'        => $filename,
                 'post_content'      => '',
                 'post_status'       => 'inherit'
-            ), $data);
+            ), (array) $data);
             $attachment_id          = wp_insert_attachment($attachment, $file, ($post instanceof WP_Post) ? $post->ID : null);
             $attachment_metadata    = wp_generate_attachment_metadata( $attachment_id, $file );
             wp_update_attachment_metadata($attachment_id, $attachment_metadata);
@@ -395,7 +415,9 @@ class RSCSV_Import_Post_Helper
     }
 
     /**
-     * A wrapper of wp_safe_remote_get
+     * Download a remote file and store it in the uploads directory.
+     * Delegates to WordPress core so the file type is validated (against its
+     * actual content, not just the extension) before it is saved.
      *
      * @param (string) $url
      * @param (array) $args
@@ -403,31 +425,33 @@ class RSCSV_Import_Post_Helper
      */
     public function remoteGet($url, $args = array())
     {
-        global $wp_filesystem;
-        if (!is_object($wp_filesystem)) {
-            WP_Filesystem();
+        if (!function_exists('download_url')) {
+            require_once ABSPATH . 'wp-admin/includes/file.php';
         }
-        
-        if ($url && is_object($wp_filesystem)) {
-            $response = wp_safe_remote_get($url, $args);
-            if (!is_wp_error($response) && $response['response']['code'] === 200) {
-                $destination = wp_upload_dir();
-                $filename = basename($url);
-                $filepath = $destination['path'] . '/' . wp_unique_filename($destination['path'], $filename);
-                
-                $body = wp_remote_retrieve_body($response);
-                
-                if ( $body && $wp_filesystem->put_contents($filepath , $body, FS_CHMOD_FILE) ) {
-                    return $filepath;
-                } else {
-                    $this->addError('remote_get_failed', __('Could not get remote file.', 'really-simple-csv-importer'));
-                }
-            } elseif (is_wp_error($response)) {
-                $this->addError($response->get_error_code(), $response->get_error_message());
-            }
+
+        if (!$url) {
+            return '';
         }
-        
-        return '';
+
+        $tmpfile = download_url($url);
+        if (is_wp_error($tmpfile)) {
+            $this->addError($tmpfile->get_error_code(), $tmpfile->get_error_message());
+            return '';
+        }
+
+        $file_array = array(
+            'name'      => basename((string) parse_url($url, PHP_URL_PATH)),
+            'tmp_name'  => $tmpfile,
+        );
+        $sideloaded = wp_handle_sideload($file_array, array('test_form' => false));
+
+        if (!empty($sideloaded['error'])) {
+            @unlink($tmpfile);
+            $this->addError('remote_get_failed', $sideloaded['error']);
+            return '';
+        }
+
+        return $sideloaded['file'];
     }
     
     /**

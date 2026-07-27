@@ -3,11 +3,13 @@
 Plugin Name: Really Simple CSV Importer
 Plugin URI: http://wordpress.org/plugins/really-simple-csv-importer/
 Description: Import posts, categories, tags, custom fields from simple csv file.
-Author: Takuro Hishikawa
-Author URI: https://en.digitalcube.jp/
+Author: websoudan
+Author URI: https://web-soudan.co.jp
+Original Author: Takuro Hishikawa
+Original Author URI: https://notnil-creative.com/
 Text Domain: really-simple-csv-importer
 License: GPL version 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-Version: 1.3
+Version: 1.3.1
 */
 
 if ( !defined('WP_LOAD_IMPORTERS') )
@@ -67,6 +69,18 @@ class RS_CSV_Importer extends WP_Importer {
 		echo ' <a href="'.plugin_dir_url( __FILE__ ).'sample/sample.ods">'.__( 'ods', 'really-simple-csv-importer' ).'</a>';
 		echo ' '.__('(OpenDocument Spreadsheet file format for LibreOffice. Please export as csv before import)', 'really-simple-csv-importer' );
 		echo '</p>';
+		?>
+		<div id="really-simple-csv-importer-form-options" style="display: none;">
+			<h2><?php _e( 'Import Options', 'really-simple-csv-importer' ); ?></h2>
+			<p><?php _e( 'Replace by post title', 'really-simple-csv-importer' ); ?></p>
+			<label>
+				<input type="radio" name="replace-by-title" value="0" checked="checked" /><?php _e( 'Disable', 'really-simple-csv-importer' ); ?>
+			</label>
+			<label>
+				<input type="radio" name="replace-by-title" value="1" /><?php _e( 'Enable', 'really-simple-csv-importer' ); ?>
+			</label>
+		</div>
+		<?php
 		wp_import_upload_form( add_query_arg('step', 1) );
 	}
 
@@ -200,7 +214,27 @@ class RS_CSV_Importer extends WP_Importer {
 						}
 					}
 				}
-				
+
+				// (string) post title
+				$post_title = $h->get_data($this,$data,'post_title');
+				if ($post_title) {
+
+					if ( ! $is_update && $_POST['replace-by-title'] == 1 ) {
+						//try to update a post with the same title
+						if ( ! $post_type ) {
+							$post_type = 'post';
+						}
+						$post_id = get_page_by_title($post_title, OBJECT, $post_type);
+
+						if ( ! is_null($post_id) ) {
+							$post['ID'] = $post_id;
+							$is_update = true;
+						}
+					}
+
+					$post['post_title'] = $post_title;
+				}
+
 				// (string) post slug
 				$post_name = $h->get_data($this,$data,'post_name');
 				if ($post_name) {
@@ -215,6 +249,16 @@ class RS_CSV_Importer extends WP_Importer {
 					} else {
 						$user = get_user_by('login',$post_author);
 					}
+					if (isset($user) && is_object($user)) {
+						$post['post_author'] = $user->ID;
+						unset($user);
+					}
+				}
+
+				// user_login to post_author
+				$user_login = $h->get_data($this,$data,'post_author_login');
+				if ($user_login) {
+					$user = get_user_by('login',$user_login);
 					if (isset($user) && is_object($user)) {
 						$post['post_author'] = $user->ID;
 						unset($user);
@@ -244,13 +288,7 @@ class RS_CSV_Importer extends WP_Importer {
 				if ($post_password) {
     				$post['post_password'] = $post_password;
 				}
-				
-				// (string) post title
-				$post_title = $h->get_data($this,$data,'post_title');
-				if ($post_title) {
-					$post['post_title'] = $post_title;
-				}
-				
+
 				// (string) post content
 				$post_content = $h->get_data($this,$data,'post_content');
 				if ($post_content) {
@@ -409,6 +447,8 @@ class RS_CSV_Importer extends WP_Importer {
 				}
 				
 				echo '</li>';
+
+				wp_cache_flush();
 			}
 		}
 		
@@ -456,5 +496,14 @@ function really_simple_csv_importer() {
     register_importer('csv', __('CSV', 'really-simple-csv-importer'), __('Import posts, categories, tags, custom fields from simple csv file.', 'really-simple-csv-importer'), array ($rs_csv_importer, 'dispatch'));
 }
 add_action( 'plugins_loaded', 'really_simple_csv_importer' );
+
+function really_simple_csv_importer_enqueue($hook) {
+	if ( 'admin.php' != $hook ) {
+		return;
+	}
+
+	wp_enqueue_script( 'really_simple_csv_importer_admin_script', plugin_dir_url( __FILE__ ) . 'auto.js', array(), false, true );
+}
+add_action( 'admin_enqueue_scripts', 'really_simple_csv_importer_enqueue' );
 
 } // class_exists( 'WP_Importer' )
