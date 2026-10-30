@@ -229,7 +229,7 @@
 			</div>
 
 			
-			<div class="flex fl-v-center gap-medium">
+			<div class="flex fl-v-center gap-small">
 				<div class="lang_switcher">
 					<ul id="lang_list" class="dropdown_panel">
 						<?php pll_the_languages();?>
@@ -238,6 +238,11 @@
 				<div>
 					<a href="<?php the_field('booking_url', 'options'); ?><?php echo pll_current_language('slug'); ?>" target="_blank" class="button"><?php pll_e('Tickets'); ?></a>
 				</div>
+				<?php if( get_field('newsletter_url', 'options') !== "" ) : ?>
+				<div>
+					<a href="<?php the_field('newsletter_url', 'options'); ?><?php echo pll_current_language('slug'); ?>" target="_blank" class="button"><?php pll_e('Newsletter'); ?></a>
+				</div>
+				<?php endif; ?>
 			</div>
 
 
