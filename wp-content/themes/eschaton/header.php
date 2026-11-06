@@ -240,7 +240,7 @@
 				</div>
 				<?php if( get_field('newsletter_url', 'options') !== "" ) : ?>
 				<div>
-					<a href="<?php the_field('newsletter_url', 'options'); ?><?php echo pll_current_language('slug'); ?>" target="_blank" class="button"><?php pll_e('Newsletter'); ?></a>
+					<a href="<?php the_field('newsletter_url', 'options'); ?>" target="_blank" class="button"><?php pll_e('Newsletter'); ?></a>
 				</div>
 				<?php endif; ?>
 			</div>
